@@ -67,10 +67,12 @@ const chimeeState = gestureFactory({
       console.log('seeking');
       this.waiting();
     },
-    waiting () {
-      console.log('waiting');
-      this.waiting();
-    },
+
+    // 修复m3u8格式iOS回到后台再进入会显示loading的问题
+    // waiting () {
+    //   console.log('waiting');
+    //   this.waiting();
+    // },
     // 卡顿(FLV|HLS加载异常待内部特供事件)
     // stalled () {
     //   this.showLoading();
